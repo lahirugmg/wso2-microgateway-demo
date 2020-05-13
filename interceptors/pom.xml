@@ -55,11 +55,6 @@
             <version>2.26.1</version>
         </dependency>
     </dependencies>
-    <scm>
-        <connection>scm:git:https://${bamboo_GIT_USERNAME}:${bamboo_GIT_PASSWORD}@github.com/lahirus/wso2-microgateway-demo.git</connection>
-        <url>http://github.com/lahirus/wso2-microgateway-demo</url>
-      <tag>HEAD</tag>
-  </scm>
     <properties>
         <project.scm.id>git-wso2</project.scm.id>
     </properties>
