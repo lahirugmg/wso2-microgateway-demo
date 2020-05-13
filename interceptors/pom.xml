@@ -56,7 +56,7 @@
         </dependency>
     </dependencies>
     <scm>
-        <connection>scm:git:https://${bamboo_GIT_USERNAME_BNY}:${bamboo_GIT_PASSWORD_BNY}@github.com/lahirus/wso2-microgateway-demo.git</connection>
+        <connection>scm:git:https://${bamboo_GIT_USERNAME_2}:${bamboo_GIT_PASSWORD_2}@github.com/lahirus/wso2-microgateway-demo.git</connection>
         <url>http://github.com/lahirus/wso2-microgateway-demo</url>
       <tag>HEAD</tag>
   </scm>
