@@ -6,6 +6,34 @@
   servers: 
     - 
       url: "/"
+  x-wso2-auth-header: "Authorization"
+  x-throttling-tier: "Unlimited"
+  x-wso2-cors:
+    corsConfigurationEnabled: false
+    accessControlAllowOrigins:
+      - "*"
+    accessControlAllowCredentials: false
+    accessControlAllowHeaders:
+      - "authorization"
+      - "Access-Control-Allow-Origin"
+      - "Content-Type"
+      - "SOAPAction"
+    accessControlAllowMethods:
+      - "GET"
+  x-wso2-request-interceptor: java:com.mgw.interceptors.apim.SimpleLogInterceptor
+  x-wso2-response-interceptor: java:com.mgw.interceptors.apim.SimpleLogInterceptor
+  x-wso2-production-endpoints:
+    urls:
+      - "http://www.mocky.io/v2/5e67ba073100008dfb230c25"
+    type: "http"
+  x-wso2-sandbox-endpoints:
+    urls:
+      - "http://www.mocky.io/v2/5e67ba073100008dfb230c25"
+    type: "http"
+  x-wso2-basePath: "/demo/v1"
+  x-wso2-transports:
+    - "http"
+    - "https"
   paths: 
     /*: 
       get: 
@@ -22,31 +50,3 @@
           implicit: 
             authorizationUrl: "https://test.com"
             scopes: {}
-  x-wso2-auth-header: "Authorization"
-  x-throttling-tier: "Unlimited"
-  x-wso2-cors: 
-    corsConfigurationEnabled: false
-    accessControlAllowOrigins: 
-      - "*"
-    accessControlAllowCredentials: false
-    accessControlAllowHeaders: 
-      - "authorization"
-      - "Access-Control-Allow-Origin"
-      - "Content-Type"
-      - "SOAPAction"
-    accessControlAllowMethods: 
-      - "GET"
-  x-wso2-request-interceptor: java:com.mgw.interceptors.apim.SimpleLogInterceptor
-  x-wso2-response-interceptor: java:com.mgw.interceptors.apim.SimpleLogInterceptor
-  x-wso2-production-endpoints: 
-    urls: 
-      - "http://www.mocky.io/v2/5e67ba073100008dfb230c25"
-    type: "http"
-  x-wso2-sandbox-endpoints: 
-    urls: 
-      - "http://www.mocky.io/v2/5e67ba073100008dfb230c25"
-    type: "http"
-  x-wso2-basePath: "/demo/v1"
-  x-wso2-transports: 
-    - "http"
-    - "https"
