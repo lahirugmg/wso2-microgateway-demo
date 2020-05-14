@@ -1,7 +1,7 @@
 #!/bin/bash
 set -x
 
-api_name=apig2
+api_name=apig
 project_name=demoapi
 poc_artifacts_source=git-source/poc-artifacts
 
