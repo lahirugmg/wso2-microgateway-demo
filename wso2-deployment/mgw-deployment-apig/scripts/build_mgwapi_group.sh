@@ -3,7 +3,7 @@ set -x
 
 api_name=apig
 project_name=demoapi
-poc_artifacts_source=git-source/poc-artifacts
+poc_artifacts_source=git-source
 
 echo "[Hilton Deployment] Running deployment..."
 
@@ -14,7 +14,7 @@ export PATH=$PATH:${bamboo_APICTLPATH}:${bamboo_KUBCTLPATH}
 apictl apply -f $poc_artifacts_source/k8s-artifacts/wso2-api-operator/controller_conf.yaml
 
 # initialize the API project using the API definition file
-apictl init -f $project_name --oas=poc-artifacts/api-definitions/mock-demo-api-def.yaml
+apictl init -f $project_name --oas=api-definitions/mock-demo-api-def.yaml
 
 # copy jar file built to libs
 /bin/cp mgw-interceptors-*.jar $project_name/libs/interceptors.jar

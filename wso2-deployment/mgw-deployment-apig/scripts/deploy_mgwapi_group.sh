@@ -4,7 +4,7 @@ set -x
 api_name=apig
 project_name=demoapi
 mgw_interceptor_version=1.0-SNAPSHOT
-poc_artifacts_source=git-source/poc-artifacts
+poc_artifacts_source=git-source
 env=$1
 
 # setting APICTL and KUBCTL paths
