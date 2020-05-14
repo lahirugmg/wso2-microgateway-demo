@@ -3,7 +3,6 @@ set -x
 
 api_name=apig
 project_name=demoapi
-mgw_interceptor_version=1.0-SNAPSHOT
 poc_artifacts_source=git-source
 env=$1
 
