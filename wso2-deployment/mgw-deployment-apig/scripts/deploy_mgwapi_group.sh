@@ -18,9 +18,6 @@ rm -rf $project_name
 
 unzip $project_name.zip
 
-echo "[Microgateway Deployment] Adding API..."
-apictl add api --verbose --override -n $api_name --from-file=$project_name
-
 # deploy the APIs with WSO2 MGW
 if apictl get apis | grep -q $api_name; then
         echo "[Hilton Deployment] Updating api $api_name..."
