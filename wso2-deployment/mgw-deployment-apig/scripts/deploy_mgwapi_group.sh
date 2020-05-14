@@ -16,6 +16,8 @@ unzip $deployment_pack-default.zip
 mv $deployment_pack/zips/* .
 rm -rf $api_name
 
+unzip $api_name.zip
+
 echo "[Microgateway Deployment] Adding API..."
 apictl add api --verbose --override -n $api_name --from-file=$project_name
 
