@@ -5,11 +5,18 @@ api_name=apig
 project_name=demoapi
 poc_artifacts_source=git-source
 env=$1
+deployment_pack=mgw-deployment-apig-1.0-SNAPSHOT
+echo "[Microgateway Deployment] Starting deployment..."
 
 # setting APICTL and KUBCTL paths
 export PATH=$PATH:${bamboo_APICTLPATH}
 
-echo "[Hilton Deployment] Adding API..."
+rm -rf $deployment_pack
+unzip $deployment_pack-default.zip
+mv $deployment_pack/zips/* .
+rm -rf $api_name
+
+echo "[Microgateway Deployment] Adding API..."
 apictl add api --verbose --override -n $api_name --from-file=$project_name
 
 # deploy the APIs with WSO2 MGW
