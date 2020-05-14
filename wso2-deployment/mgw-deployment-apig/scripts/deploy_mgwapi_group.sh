@@ -14,9 +14,9 @@ export PATH=$PATH:${bamboo_APICTLPATH}
 rm -rf $deployment_pack
 unzip $deployment_pack-default.zip
 mv $deployment_pack/zips/* .
-rm -rf $api_name
+rm -rf $project_name
 
-unzip $api_name.zip
+unzip $project_name.zip
 
 echo "[Microgateway Deployment] Adding API..."
 apictl add api --verbose --override -n $api_name --from-file=$project_name
