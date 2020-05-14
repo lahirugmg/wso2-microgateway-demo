@@ -1,4 +1,4 @@
-package com.hiton.mgw.interceptors.apim;
+package com.mgw.interceptors.apim;
 
 import com.mgw.interceptors.apim.util.LoggerUtil;
 import org.ballerinalang.jvm.scheduling.Scheduler;
