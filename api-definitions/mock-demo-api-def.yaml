@@ -24,11 +24,11 @@
   x-wso2-response-interceptor: java:com.mgw.interceptors.apim.SimpleLogInterceptor
   x-wso2-production-endpoints:
     urls:
-      - "http://www.mocky.io/v2/5e67ba073100008dfb230c25"
+      - "http://www.mocky.io/v2/5ebe15103100007800c5cfb0"
     type: "http"
   x-wso2-sandbox-endpoints:
     urls:
-      - "http://www.mocky.io/v2/5e67ba073100008dfb230c25"
+      - "http://www.mocky.io/v2/5ebe15103100007800c5cfb0"
     type: "http"
   x-wso2-basePath: "/demo/v1"
   x-wso2-transports:
