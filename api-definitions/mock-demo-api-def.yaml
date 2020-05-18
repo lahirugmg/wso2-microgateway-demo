@@ -24,7 +24,7 @@
   x-wso2-response-interceptor: java:com.mgw.interceptors.apim.SimpleLogInterceptor
   x-wso2-production-endpoints:
     urls:
-      - "http://www.mocky.io/v2/5ebe15103100007800c5cfb0"
+      - "http://www.mocky.io/v2/5ebe15103100007800c5cfb0?mocky-delay=10000ms"
     advanceEndpointConfig:
       timeoutInMillis: 5000
       circuitBreaker:
