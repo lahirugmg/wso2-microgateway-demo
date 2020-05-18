@@ -25,6 +25,20 @@
   x-wso2-production-endpoints:
     urls:
       - "http://www.mocky.io/v2/5ebe15103100007800c5cfb0"
+    advanceEndpointConfig:
+      timeoutInMillis: 5000
+      circuitBreaker:
+        rollingWindow:
+          requestVolumeThreshold: 1
+          timeWindowInMillis: 60000
+          bucketSizeInMillis: 2000
+        failureThreshold: 0.2
+        resetTimeInMillis: 120000
+        statusCodes:
+          - 500
+      poolConfig:
+        maxActiveConnections: 1000
+        maxIdleConnections: 50
     type: "http"
   x-wso2-sandbox-endpoints:
     urls:
