@@ -5,7 +5,7 @@ env=$1
 env_apim_url=$2 #https://wso2apim:32001
 env_apim_token_url=$3 #https://wso2apim:32001/oauth2/token
 
-echo "[Hilton Deployment] Initialize Environment ... $api_name"
+echo "[Deployment] Initialize Environment ... $api_name"
 
 # setting APICTL and KUBCTL paths
 export PATH=$PATH:${bamboo_APICTLPATH}:${bamboo_KUBCTLPATH}

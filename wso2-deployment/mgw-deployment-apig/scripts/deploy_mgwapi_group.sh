@@ -20,15 +20,15 @@ unzip $project_name.zip
 
 # deploy the APIs with WSO2 MGW
 if apictl get apis | grep -q $api_name; then
-        echo "[Hilton Deployment] Updating api $api_name..."
+        echo "[Deployment] Updating api $api_name..."
         apictl update api --verbose -n $api_name --from-file=$project_name  --namespace wso2-$env
 else
-        echo "[Hilton Deployment] Creating api $api_name..."
+        echo "[Deployment] Creating api $api_name..."
         apictl add api --verbose --override -n $api_name --from-file=$project_name --namespace wso2-$env
 fi
 
 
-echo "[Hilton Deployment] Publishing APIs ... $api_name"
+echo "[Deployment] Publishing APIs ... $api_name"
 
 # import the API to the API portal
 apictl login $env -u admin -p admin -k

@@ -5,13 +5,10 @@ api_name=apig
 project_name=demoapi
 poc_artifacts_source=git-source
 
-echo "[Hilton Deployment] Running deployment..."
+echo "[Deployment] Running deployment..."
 
 # setting APICTL and KUBCTL paths
 export PATH=$PATH:${bamboo_APICTLPATH}:${bamboo_KUBCTLPATH}
-
-# apply APICTL config
-apictl apply -f $poc_artifacts_source/k8s-artifacts/wso2-api-operator/controller_conf.yaml
 
 # initialize the API project using the API definition file
 apictl init -f $project_name --oas=$poc_artifacts_source/api-definitions/mock-demo-api-def.yaml
