@@ -26,7 +26,7 @@
     urls:
       - "http://www.mocky.io/v2/5ebe15103100007800c5cfb0?mocky-delay=10000ms"
     advanceEndpointConfig:
-      timeoutInMillis: 5000
+      timeoutInMillis: 15000
       circuitBreaker:
         rollingWindow:
           requestVolumeThreshold: 1
